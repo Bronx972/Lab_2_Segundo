@@ -1,4 +1,4 @@
-import {client} from "./modelo/db.js";
+import {conectar} from "./modelo/db.js";
 
 import exp from 'express';
 
@@ -7,7 +7,7 @@ app.set('views','./static')
 app.set('view engine', 'ejs')
 
 app.get('/',(req,res)=>{
-    client.query('SELECT * FROM tecsup',(error,results)=>{
+    conectar.query('SELECT * FROM tecsup',(error,results)=>{
         if (error){
             throw error;
         }else{

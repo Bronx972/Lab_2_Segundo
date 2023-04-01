@@ -1,5 +1,6 @@
+import db from 'mysql';
 
-const mysql = require('mysql');
+const mysql = db;
 
 var conectar = mysql.createConnection({
     host     : 'localhost',
